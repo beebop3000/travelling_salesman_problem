@@ -1,0 +1,14 @@
+body{
+    background:dimgray;
+    overflow:hidden;
+    text-align:center;
+}
+
+#myCanvas{
+    background:whitesmoke;
+}
+
+
+h1{
+    color: whitesmoke;
+}
