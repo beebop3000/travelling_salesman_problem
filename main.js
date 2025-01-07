@@ -13,11 +13,17 @@ for(let i = 0; i <= totalNumberNodes; i++){
     allNodes.push( new Node([canvas.width, canvas.height]));
 }
 
-for(let i = 0; i <= allNodes.length; i++){
+for(let i = 0; i < allNodes.length; i++){
     allNodes[i].getNodeCoordinates();
     allNodes[i].drawNode();
-
 }
+
+const network = new Network(allNodes);
+
+network.drawMap();
+
+
+
 
 
 
