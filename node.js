@@ -1,13 +1,9 @@
 class Node{
 
-    constructor(dimensions){
+    constructor(coordinates,dimensions){
         this.dimensions = dimensions;
-        this.coordinates;
-        // We might have a feature here because I sill eventually want to control the ecxact coordinadets 
-    }
-
-    getNodeCoordinates(){
-        this.coordinates = [Math.floor(Math.random() * this.dimensions[0]* 0.9), Math.floor(Math.random() * this.dimensions[1] * 0.9 )]; // times 0.9 so just in slightly from the edge
+        this.coordinates = coordinates;
+        // Pre-selected coordinates
     }
 
 

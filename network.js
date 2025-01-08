@@ -7,6 +7,11 @@ class Network{
 
     drawMap(){
 
+        for(let i = 0; i < this.allNodes.length; i++){
+            console.log('XXX');
+            this.allNodes[i].drawNode();
+        }
+
         
 
         for(let i = 1; i <= (this.allNodes.length); i++){
@@ -29,8 +34,5 @@ class Network{
         }
 
         
-    
-        // This will just draw all the lines connecting all the nodes in the order that they are in
-        // we will have an algorithem that iterates through and plots the lines somewhere else
     }
 };

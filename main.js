@@ -5,17 +5,23 @@ canvas.height = 400;
 
 const ctx = canvas.getContext("2d");
 
-const allNodes = [];
+const points = [[100,90],
+                [750,45],
+                [330,180],
+                [410,360],
+                [60,12],
+                [55,350],
+                [380,140],
+                [420,320],
+                [710,380],
+                [710,380],
+                [600,200]
+              ]
 
-const totalNumberNodes = 8;
+const allNodes = []
 
-for(let i = 0; i <= totalNumberNodes; i++){
-    allNodes.push( new Node([canvas.width, canvas.height]));
-}
-
-for(let i = 0; i < allNodes.length; i++){
-    allNodes[i].getNodeCoordinates();
-    allNodes[i].drawNode();
+for(let i = 0; i < points.length; i++){
+  allNodes.push( new Node(points[i],[canvas.width, canvas.height]));
 }
 
 const network = new Network(allNodes);
