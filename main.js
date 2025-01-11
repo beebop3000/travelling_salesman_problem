@@ -20,14 +20,18 @@ const points = [[100,90],
 
 const allNodes = []
 
-for(let i = 0; i < points.length; i++){
-  allNodes.push( new Node(points[i],[canvas.width, canvas.height]));
-}
+// for(let i = 0; i < points.length; i++){
+//   allNodes.push( new Node(points[i],[canvas.width, canvas.height]));
+// }
 
-const network = new Network(allNodes);
+// const network = new Network(allNodes);
 
-network.drawMap();
+// network.drawMap();
 
+
+line = new Line([[1,2],[3,4]]);
+
+console.log(line.dist);
 
 
 
