@@ -1,6 +1,8 @@
 class Network{
     constructor(allNodes){
         this.allNodes = allNodes;
+        this.routeLength;
+        this.#findRouteLength();
     }
 
 
@@ -8,7 +10,6 @@ class Network{
     drawMap(){
 
         for(let i = 0; i < this.allNodes.length; i++){
-            console.log('XXX');
             this.allNodes[i].drawNode();
         }
 
@@ -21,7 +22,6 @@ class Network{
 
             if(b == this.allNodes.length){
                 b = 0;
-                
             }
             
             console.log(this.allNodes[a].coordinates);
@@ -32,7 +32,34 @@ class Network{
             ctx.lineTo(this.allNodes[b].coordinates[0], this.allNodes[b].coordinates[1]);
             ctx.stroke();
         }
-
         
     }
+
+
+    #findRouteLength(){
+
+        var totalLength = 0;
+
+        for(let i = 1; i <= (this.allNodes.length); i++){
+            
+            let a = i-1;
+            let b = i;
+
+            if(b == this.allNodes.length){
+                b = 0;
+            }
+            
+            totalLength += Math.sqrt(  Math.pow(this.allNodes[a].coordinates[0] - this.allNodes[b].coordinates[0],2) + Math.pow(this.allNodes[a].coordinates[1] - this.allNodes[a].coordinates[1],2) );
+        }
+
+        this.routeLength = totalLength;
+
+        console.log("The total network length:  ", this.routeLength);
+
+
+    }       
+
+
+
+
 };

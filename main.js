@@ -14,24 +14,26 @@ const points = [[100,90],
                 [380,140],
                 [420,320],
                 [710,380],
-                [710,380],
                 [600,200]
               ]
 
 const allNodes = []
 
-// for(let i = 0; i < points.length; i++){
-//   allNodes.push( new Node(points[i],[canvas.width, canvas.height]));
-// }
+for(let i = 0; i < points.length; i++){
+  allNodes.push( new Node(points[i],[canvas.width, canvas.height]));
+}
 
-// const network = new Network(allNodes);
+const network = new Network(allNodes);
 
-// network.drawMap();
+network.drawMap();
+
+console.log(network.routeLength)
 
 
-line = new Line([[1,2],[3,4]]);
 
-console.log(line.dist);
+// line = new Line([[1,2],[3,4]]);
+
+// console.log(line.dist);
 
 
 
